@@ -6,7 +6,7 @@
   </a>
   <h1 align="center">Reproducible-Go-Binaries</h1>
   <p align="center">
- A quick and easy way to compile reproducible binaries with Golang using Docker and a Makefile.
+ A quick and easy way to compile reproducible, independently verifiable binaries with Golang using Docker and a Makefile.
 
  
 <br />
