@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="assets/gophers_working.png" alt="Logo" width="800" height="800">
+    <img src="assets/gophers_working.png" alt="Logo" width="500" height="500">
   </a>
   <h1 align="center">Reproducible-Go-Binaries</h1>
   <p align="center">
