@@ -14,7 +14,6 @@ linux-amd64-binary:
 	#Remove the linux-binary-image
 	docker image rm linux-binary-image
 
-
 linux-386-binary: 
 	docker build -t linux-binary-image --build-arg BUILDOS=linux --build-arg BUILDARCH=386 --build-arg BUILDNAME=$(BUILDNAME) --no-cache .
 	docker run --name linux-binary  linux-binary-image
@@ -22,14 +21,12 @@ linux-386-binary:
 	docker rm linux-binary
 	docker image rm linux-binary-image
 
-
 linux-arm-binary: 
 	docker build -t linux-binary-image --build-arg BUILDOS=linux --build-arg BUILDARCH=arm --build-arg BUILDNAME=$(BUILDNAME) --no-cache .
 	docker run --name linux-binary  linux-binary-image
 	docker cp linux-binary:/app/$(BUILDNAME) .
 	docker rm linux-binary
 	docker image rm linux-binary-image
-
 
 linux-arm64-binary: 
 	docker build -t linux-binary-image --build-arg BUILDOS=linux --build-arg BUILDARCH=arm64 --build-arg BUILDNAME=$(BUILDNAME) --no-cache .
