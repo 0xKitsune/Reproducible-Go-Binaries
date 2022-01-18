@@ -64,7 +64,6 @@ linux-mipsle-binary:
 	docker rm linux-binary
 	docker image rm linux-binary-image
 
-
 linux-mips64-binary: 
 	docker build -t linux-binary-image --build-arg BUILDOS=linux --build-arg BUILDARCH=mips64 --build-arg BUILDNAME=$(BUILDNAME) --no-cache .
 	docker run --name linux-binary  linux-binary-image
@@ -185,18 +184,18 @@ openbsd-arm-binary:
 	docker image rm openbsd-binary-image
 
 plan9-386-binary: 
-	docker build -t openbsd-binary-image --build-arg BUILDOS=plan9 --build-arg BUILDARCH=386 --build-arg BUILDNAME=$(BUILDNAME) --no-cache .
-	docker run --name openbsd-binary  plan9-binary-image
-	docker cp openbsd-binary:/app/$(BUILDNAME) .
-	docker rm openbsd-binary
-	docker image rm openbsd-binary-image
+	docker build -t plan9-binary-image --build-arg BUILDOS=plan9 --build-arg BUILDARCH=386 --build-arg BUILDNAME=$(BUILDNAME) --no-cache .
+	docker run --name plan9-binary  plan9-binary-image
+	docker cp plan9-binary:/app/$(BUILDNAME) .
+	docker rm plan9-binary
+	docker image rm plan9-binary-image
 
 plan9-amd64-binary: 
-	docker build -t openbsd-binary-image --build-arg BUILDOS=plan9 --build-arg BUILDARCH=amd64 --build-arg BUILDNAME=$(BUILDNAME) --no-cache .
-	docker run --name openbsd-binary  plan9-binary-image
-	docker cp openbsd-binary:/app/$(BUILDNAME) .
-	docker rm openbsd-binary
-	docker image rm openbsd-binary-image
+	docker build -t plan9-binary-image --build-arg BUILDOS=plan9 --build-arg BUILDARCH=amd64 --build-arg BUILDNAME=$(BUILDNAME) --no-cache .
+	docker run --name plan9-binary  plan9-binary-image
+	docker cp plan9-binary:/app/$(BUILDNAME) .
+	docker rm plan9-binary
+	docker image rm plan9-binary-image
 
 solaris-amd64-binary:
 	docker build -t solaris-binary-image --build-arg BUILDOS=solaris --build-arg BUILDARCH=amd64 --build-arg BUILDNAME=$(BUILDNAME) --no-cache .
