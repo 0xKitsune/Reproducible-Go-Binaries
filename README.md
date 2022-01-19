@@ -14,7 +14,7 @@
 
 ## How to use this repo
 
-For a full walkthrough on how to use this repo, [check out the Hackernoon article](). Otherwise, read below for a quick overview.
+For a full walkthrough on how to use this repo, [check out the Hackernoon article](https://hackernoon.com/building-reproducible-verifiable-binaries-with-golang). Otherwise, read below for a quick overview.
 
 This repo contains a Dockerfile and a Makefile to build reproducible Go binaries across 30 different build combinations. 
   
